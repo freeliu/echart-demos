@@ -1,4 +1,5 @@
-// ? d.ts?
+// 开发，加强代码提示用
+
 import type {
     // 系列类型的定义后缀都为 SeriesOption
     BarSeriesOption,
