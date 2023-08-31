@@ -4,9 +4,27 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>bar chart</title>
+    <style>
+        #app{
+            min-width: 100vw;
+            min-height: 100vh;
+            display: grid;
+            gap: 10px;
+            grid-template: repeat(2,1fr)/repeat(2,1fr);
+            & >div{
+                background-color: skyblue;
+            }
+        }
+    </style>
 </head>
 <body>
-  hello
+    <div id="app">
+        <div id="ch1"></div>
+        <div id="ch2"></div>
+        <div id="ch3"></div>
+        <div id="ch4"></div>
+    </div>
+<script src="bar.js" type="module"></script>
 </body>
 </html>
