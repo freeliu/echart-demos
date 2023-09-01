@@ -1,4 +1,4 @@
-import * as echarts from 'echarts';
+import echarts from './echarts.js';
 
 const cht1 = echarts.init(document.getElementById('ch1'));
 const cht2 = echarts.init(document.getElementById('ch2'));

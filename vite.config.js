@@ -1,7 +1,8 @@
 import { resolve } from 'path';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { defineConfig } from 'vite';
 
-/** @type {import('vite').UserConfig} */
-export default {
+export default defineConfig({
   base: './',
   css: {
     devSourcemap: true,
@@ -18,4 +19,4 @@ export default {
     cssCodeSplit: false,
     minify: false,
   },
-};
+});

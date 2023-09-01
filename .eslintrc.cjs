@@ -1,3 +1,6 @@
+/**
+ * @type {import('eslint').Linter.Config}
+ */
 module.exports = {
   env: {
     browser: true,
@@ -12,6 +15,8 @@ module.exports = {
   },
   rules: {
     camelcase:0,
-    'no-plusplus':0
+    'no-plusplus':0,
+    'import/extensions':0
   },
+  ignorePatterns:['dist','node_modules']
 };

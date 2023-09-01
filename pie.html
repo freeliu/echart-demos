@@ -1,34 +1,146 @@
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
-    <title>line chart</title>
-    <style>
-        #app {
-            width: 100%;
-            height: 100%;
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            grid-template-rows: repeat(3,1fr);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
+  <title>line chart</title>
+  <style>
+      #app {
+          width: 100%;
+          height: 100%;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+      }
 
 
-    </style>
+  </style>
 
 </head>
 <body>
 <div id="app">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div id="cht1"></div>
-    <div id="cht2"></div>
-    <div id="cht3"></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div id="cht1"></div>
+  <div id="cht2"></div>
+  <div id="cht3"></div>
 
 </div>
-<script src="pie.js" type="module"></script>
+<script type="module">
+  import echarts from './echarts.js';
+
+  const cht1 = echarts.init(document.getElementById('cht1'));
+  const cht2 = echarts.init(document.getElementById('cht2'));
+  const cht3 = echarts.init(document.getElementById('cht3'));
+
+  window.onresize = () => {
+    cht1.resize();
+    cht2.resize();
+    cht3.resize();
+  };
+
+  /**
+   * @type {import('/types').ECOption}
+   */
+  const option1 = {
+    title: {
+      text: '基础饼图(Basic Pie Chart)',
+      left: 'center'
+    },
+    series: [
+      {
+        type: 'pie',
+        data: [
+          {
+            value: 335,
+            name: '直接访问'
+          },
+          {
+            value: 234,
+            name: '联盟广告'
+          },
+          {
+            value: 1548,
+            name: '搜索引擎'
+          }
+        ],
+        radius: '50%'
+      }
+    ]
+  };
+
+  /** @type {import('/types').ECOption} */
+  const option2 = {
+    title: {
+      text: '圆环图的例子',
+      left: 'center'
+    },
+    series: [
+      {
+        type: 'pie',
+        data: [
+          {
+            value: 335,
+            name: 'A'
+          },
+          {
+            value: 234,
+            name: 'B'
+          },
+          {
+            value: 1548,
+            name: 'C'
+          }
+        ],
+        radius: ['40%', '60%']
+      }
+    ]
+  };
+
+  /** @type {import('/types').ECOption} */
+  const option3 = {
+    title: {
+      top: 5,
+      text: '南丁格尔图（玫瑰图）Rose Chart（Nightingale Chart）',
+      left: 'center'
+    },
+    series: [
+      {
+        type: 'pie',
+        data: [
+          {
+            value: 100,
+            name: 'A'
+          },
+          {
+            value: 200,
+            name: 'B'
+          },
+          {
+            value: 300,
+            name: 'C'
+          },
+          {
+            value: 400,
+            name: 'D'
+          },
+          {
+            value: 500,
+            name: 'E'
+          }
+        ],
+        roseType: 'area'
+      }
+    ]
+  };
+
+  cht1.setOption(option1);
+  cht2.setOption(option2);
+  cht3.setOption(option3);
+
+</script>
 </body>
 </html>
