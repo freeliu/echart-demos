@@ -1,4 +1,3 @@
-import 'normalize.css';
 import * as echarts from 'echarts';
 
 const cht1 = echarts.init(document.getElementById('cht1'));

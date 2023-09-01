@@ -12,5 +12,6 @@ module.exports = {
   },
   rules: {
     camelcase:0,
+    'no-plusplus':0
   },
 };

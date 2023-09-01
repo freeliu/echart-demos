@@ -1,8 +1,7 @@
 import { resolve } from 'path';
 
 /**
- * vite config
- * @type {import('vite').UserConfig}
+ *  @type {import('vite').UserConfig}
  */
 export default {
   css: {
@@ -17,5 +16,7 @@ export default {
         pie: resolve(__dirname, 'pie.html'),
       },
     },
+    cssCodeSplit: false,
+    minify: false,
   },
 };

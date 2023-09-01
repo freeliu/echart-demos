@@ -9,8 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "echarts": "^5.4.3",
-    "normalize.css": "^8.0.1"
+    "echarts": "^5.4.3"
   },
   "devDependencies": {
     "eslint": "^8.48.0",
