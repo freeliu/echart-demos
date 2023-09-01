@@ -1,16 +1,16 @@
-export default {
+module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
   },
-  extends: ["standard"],
-  overrides: [],
+  extends: 'airbnb-base',
+  overrides: [
+  ],
   parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
   rules: {
-    camelcase: 0,
+    camelcase:0,
   },
 };

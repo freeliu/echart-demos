@@ -1,4 +1,4 @@
-import { resolve } from "path";
+import { resolve } from 'path';
 
 /**
  * vite config
@@ -11,9 +11,10 @@ export default {
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        bar: resolve(__dirname, "bar.html"),
-        line: resolve(__dirname, "line.html"),
+        main: resolve(__dirname, 'index.html'),
+        bar: resolve(__dirname, 'bar.html'),
+        line: resolve(__dirname, 'line.html'),
+        pie: resolve(__dirname, 'pie.html'),
       },
     },
   },
