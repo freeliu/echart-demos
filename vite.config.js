@@ -1,19 +1,20 @@
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
+import { resolve } from "path";
 
 /**
  * vite config
  * @type {import('vite').UserConfig}
  */
 export default {
-   css:{
-       devSourcemap:true
-   },
-    build:{
-       rollupOptions:{
-           input:{
-               main:resolve(__dirname,'*.html'),
-           }
-       }
-    }
-}
+  css: {
+    devSourcemap: true,
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        bar: resolve(__dirname, "bar.html"),
+        line: resolve(__dirname, "line.html"),
+      },
+    },
+  },
+};
