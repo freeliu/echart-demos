@@ -1,9 +1,8 @@
 import { resolve } from 'path';
 
-/**
- *  @type {import('vite').UserConfig}
- */
+/** @type {import('vite').UserConfig} */
 export default {
+  base: './',
   css: {
     devSourcemap: true,
   },
